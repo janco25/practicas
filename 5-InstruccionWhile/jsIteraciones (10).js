@@ -13,35 +13,37 @@ function Mostrar()
         {
             sposi+=n;
             cantpos++;
-            if (n%2==0)
-                {
-                     cantpar++;
-                }//fin if 1
+            //fin if 1
             if(n==0)
                 {
                     cantcero++;
                     cantpos--;
-                }//fin de if 2
+                }
+            if (n%2==0 && n!=0)
+                {
+                    cantpar++;
+                }
+                //fin de if 2
         }else
         {
             sneg+=n;
-            cantneg+=1;
+            cantneg++;
         }//fin de if
             	
 	   respuesta=confirm("continuara");
 	}//fin de while
     promposi=sposi/cantpos;
     promneg=sneg/cantneg;
-    diferencia=sposi-sneg;
+    diferencia=sposi+sneg;
     document.write("suma de +: "+sposi+"<br>");
     document.write("suma de negativos: "+sneg+"<br>");
     document.write("cant positivos: "+cantpos+"<br>");
     document.write("cant negativos: "+cantneg+"<br>");
     document.write("cant ceros: "+cantcero+"<br>");
     document.write("cant pares: "+cantpar+"<br>");
-     document.write("promedio positivos: "+promposi+"<br>");
-     document.write("promedio negativos: "+promneg+"<br>");
-     document.write("diferencia en tre -+: "+diferencia);
+    document.write("promedio positivos: "+promposi+"<br>");
+    document.write("promedio negativos: "+promneg+"<br>");
+    document.write("diferencia en tre -+: "+diferencia);
 
 
 }//FIN DE LA FUNCIÓN
